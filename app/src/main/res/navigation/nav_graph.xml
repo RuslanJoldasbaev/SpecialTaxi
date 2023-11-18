@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
 
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.specialtaxi.ui.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectFragment"
+        android:name="com.example.specialtaxi.ui.SelectFragment"
+        android:label="SelectFragment"
+        tools:layout="@layout/fragment_select" />
+    <fragment
+        android:id="@+id/loginCodeFragment"
+        android:name="com.example.specialtaxi.ui.LoginCodeFragment"
+        android:label="LoginCodeFragment" >
+        <action
+            android:id="@+id/action_loginCodeFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.specialtaxi.ui.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_loginCodeFragment"
+            app:destination="@id/loginCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.specialtaxi.ui.LocationFragment"
+        android:label="LocationFragment" >
+        <action
+            android:id="@+id/action_locationFragment_to_raz1Fragment"
+            app:destination="@id/raz1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raz1Fragment"
+        android:name="com.example.specialtaxi.ui.Raz1Fragment"
+        android:label="Raz1Fragment" >
+        <action
+            android:id="@+id/action_raz1Fragment_to_raz2Fragment"
+            app:destination="@id/raz2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/raz2Fragment"
+        android:name="com.example.specialtaxi.ui.Raz2Fragment"
+        android:label="Raz2Fragment" />
 </navigation>
