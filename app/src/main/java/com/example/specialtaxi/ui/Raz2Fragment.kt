@@ -16,10 +16,5 @@ class Raz2Fragment : Fragment(R.layout.fragment_raz_2) {
 
         binding = FragmentRaz2Binding.bind(view)
 
-        binding.raz2Button.setOnClickListener {
-            findNavController().navigate(
-                Raz1FragmentDirections.actionRaz1FragmentToRaz2Fragment()
-            )
-        }
     }
 }
